@@ -16,8 +16,10 @@ from telegram.ext import (
 # ══════════════════════════════════════════════
 #  НАСТРОЙКИ — замени на свои
 # ══════════════════════════════════════════════
-BOT_TOKEN  = "7591066854:AAE6REPo-oQQZB1GzLo3RVNfP0LlGIeUkCs"
-ADMIN_ID   = 1649383849          # твой Telegram ID (узнать у @userinfobot)
+
+import os
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+ADMIN_ID  = int(os.environ.get("ADMIN_ID"))
 
 # Реквизиты для оплаты
 CARD_NUMBER   = "8600 1234 5678 9012"   # номер карты Uzcard/Humo
